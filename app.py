@@ -259,7 +259,7 @@ async def score_resumes_endpoint(
         print(res,"result")
         candidate = res.get("candidate_name", "Unknown")
         scores = res.get("scores", {})
-        row = [candidate] + [scores.get(crit, 0) for crit in criteria_list] + [scores.get("Total Score", 0)]
+        row = [candidate] + [scores.get(crit, 0) for crit in criteria_list] + [res.get("Total Score", 0)]
         writer.writerow(row)
     output.seek(0)
     logger.info("CSV file generated, sending response.")
