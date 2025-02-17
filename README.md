@@ -62,6 +62,9 @@ Copy
     "Strong background in Machine Learning"
   ]
 }
+
+
+
 2. POST /score-resumes
 Description:
 Enqueue resume scoring jobs for multiple resumes and return a CSV file with scores.
